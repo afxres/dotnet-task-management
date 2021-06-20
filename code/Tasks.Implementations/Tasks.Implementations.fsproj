@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Mikodev.Tasks.TaskCompletionManagement</RootNamespace>
+    <AssemblyName>Mikodev.Tasks.TaskCompletionManagement</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="TaskCompletionContext.fs" />
+    <Compile Include="TaskCompletionManager.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks.Abstractions\Tasks.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

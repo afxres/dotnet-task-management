@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Mikodev.Tasks.Abstractions</RootNamespace>
+    <AssemblyName>Mikodev.Tasks.TaskCompletionManagement.Abstractions</AssemblyName>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+</Project>
