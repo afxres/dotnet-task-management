@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Tasks.Abstractions\Tasks.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.0" />
+  </ItemGroup>
+
 </Project>

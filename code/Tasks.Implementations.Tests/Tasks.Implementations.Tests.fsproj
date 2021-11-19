@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -21,6 +20,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tasks.Implementations\Tasks.Implementations.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
