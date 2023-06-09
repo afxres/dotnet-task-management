@@ -24,19 +24,15 @@ type TaskCompletionManager<'K, 'V when 'K : equality>(scanInterval : TimeSpan) =
 
     let contexts = Dictionary<'K, TaskCompletionContext<'K, 'V>>()
 
-    let find key = lock locker (fun () ->
+    let update key action = lock locker (fun () ->
         match contexts.TryGetValue key with
         | true, value ->
+            action value.Completion
+            // ensure completed before removing
+            assert value.Completion.Task.IsCompleted
             contexts.Remove key |> ignore
-            Some value
-        | _ -> None)
-
-    let update key action =
-        match find key with
-        | Some context ->
-            action context.Completion
             true
-        | _ -> false
+        | _ -> false)
 
     let loop () = async {
         // scan and remove
